@@ -1,0 +1,30 @@
+Algoritmo Promedios
+	Definir parametro1, parametro2, parametro3, parametro4, promedio Como Real
+	Definir cualitativo Como Cadena
+	<< "Ingresar nota del primer parametro : "
+	>> parametro1
+	<< "Ingresar nota del segundo parametro : "
+	>> parametro2
+	<< "Ingresar nota del tercer parametro : "
+	>> parametro3
+	<< "Ingresar nota del cuarto parametro : "
+	>> parametro4
+	<<"Su promedio cualitativo es: ", promCuali(parametro1,parametro2,parametro3,parametro4)
+FinAlgoritmo
+
+Funcion cualitativo <-promCuali(parametro1,parametro2,parametro3,parametro4)
+	promedio = (parametro1 + parametro2 + parametro3 + parametro4) / 4	
+	Si(promedio <= 5) Entonces
+		cualitativo = "Regular"
+	SiNo
+		Si(promedio <= 8) Entonces
+			cualitativo = "Bueno"
+		SiNo
+			Si(promedio <= 9) Entonces
+				cualitativo= "Muy bueno"
+			SiNo
+				cualitativo = "Sobresaliente"
+			FinSi
+		FinSi
+	FinSi
+FinFuncion

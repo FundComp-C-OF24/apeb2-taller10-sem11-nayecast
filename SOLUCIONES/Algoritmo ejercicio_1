@@ -1,0 +1,74 @@
+Algoritmo ejercicio_1
+	Definir matriz1, matriz2, matriz3, numfil, numcolum Como Entero
+	Definir promedio Como Real
+	numfil = 3
+	numcolum = 3
+	Dimension matriz1[numfil, numcolum]
+	Dimension matriz2[numfil, numcolum]
+	Dimension matriz3[numfil, numcolum]
+	completarMatriz(matriz1, numfil, numcolum)
+	Escribir "Matriz:"
+	generarMatriz(matriz1, numfil, numcolum)
+	completPares(matriz1, matriz2, numfil, numcolum)
+	Escribir " "
+	Escribir "Los valores pares de esta matriz son:"
+	generarMatriz(matriz2, numfil, numcolum)
+	completImpares(matriz1, matriz3, numfil, numcolum)
+	Escribir "Los valores impares de esta matriz son:"
+	generarMatriz(matriz3, numfil, numcolum)
+	promedioMatriz(matriz1, numfil, numcolum, promedio)
+	Escribir "El promedio de la matriz es: ", promedio
+FinAlgoritmo
+
+SubProceso completarMatriz (matriz1, numfil, numcolum)
+	Para i<-0 Hasta numfil-1 Con Paso 1 Hacer
+		Para j<-0 Hasta numcolum-1 Con Paso 1 Hacer
+			matriz1[i,j] = Aleatorio(1,50)
+		Fin Para
+	Fin Para
+FinSubProceso
+
+Funcion generarMatriz (matriz1, numfil, numcolum)
+	Para i<-0 Hasta numfil-1 Con Paso 1 Hacer
+		Para j<-0 Hasta numcolum-1 Con Paso 1 Hacer
+			Escribir matriz1[i,j], "  /  " Sin Saltar
+		Fin Para
+		Escribir " "
+	Fin Para
+FinFuncion
+
+Funcion completPares (matriz1, matriz2, numfil, numcolum)
+	Para i<-0 Hasta numfil-1 Con Paso 1 Hacer
+		Para j<-0 Hasta numcolum-1 Con Paso 1 Hacer
+			Si (matriz1[i,j] MOD 2) == 0 Entonces
+				matriz2[i,j] = matriz1[i,j]
+			SiNo
+				matriz2[i,j] = 0
+			Fin Si
+		Fin Para
+	Fin Para
+FinFuncion
+
+Funcion completImpares (matriz1, matriz3, numfil, numcolum)
+	Para i<-0 Hasta numfil-1 Con Paso 1 Hacer
+		Para j<-0 Hasta numcolum-1 Con Paso 1 Hacer
+			Si (matriz1[i,j] MOD 2) <> 0 Entonces
+				matriz3[i,j] = matriz1[i,j]
+			SiNo
+				matriz3[i,j] = 0
+			Fin Si
+		Fin Para
+	Fin Para
+	Escribir " "
+FinFuncion
+
+Funcion presentarPromedio (matriz1, numfil, numcolum, promedio Por Referencia)
+	Definir suma Como Entero
+	Para i<-0 Hasta numfil-1 Con Paso 1 Hacer
+		Para j<-0 Hasta numcolum-1 Con Paso 1 Hacer
+			suma = suma + matriz1[i,j]
+		Fin Para
+	Fin Para
+	Escribir " "
+	promedio = suma/(numfil*numcolum)
+FinFuncion

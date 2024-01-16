@@ -1,0 +1,35 @@
+ANALISIS_2
+ENTRADA                       PROCESO                                              SALIDA
+ladoCuadra              areaTotal<-areaTriangulo(baseTrian, altTrian)          areaTotal= (altTrian * baseTrian) / 2                      
+altTrian                areaTotal<-areaCuadrado(ladoCuadra)                    areaTotal = ladoCuadra * ladoCuadra
+baseTri                 areaTotal<-areaRectangulo(baseRect, altRect)           areaTotal = baseRect * altRect          
+altRect
+baseRect
+areaTotal
+
+Prueba de Escritorio_2
+Ingrese el numero de lo que desea calcular
+1. Area de  Triangulo
+2. Area de  Cuadrado
+3. Area de  Rectangulo
+> 1
+
+Ingrese altura del triangulo:
+> 20
+Ingrese base del triangulo:
+> 9
+Area del triangulo es: 90
+
+> 2
+
+Ingrese el lado del cuadrado:
+> 8
+Area del cuadrado es: 64
+
+> 3
+
+Ingrese base del rectangulo:
+> 9
+Ingrese altura del rectangulo:
+> 4
+Area del rectangulo es: 36

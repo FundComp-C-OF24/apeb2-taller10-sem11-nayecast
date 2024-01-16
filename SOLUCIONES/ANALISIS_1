@@ -1,0 +1,24 @@
+ANALISIS_1
+numFila         numColum             matriz            impar de matriz        par de matriz           promedio
+   3               3             14  / 23  / 10  /    23 / 9 / 19 / 29        14 / 26 / 10/ 6 / 20   23+9+19+29+14+26+10+6+20 / 9
+                                 9  / 26  / 6  /                                                            156/9
+                                 19  / 29  / 20  /                                                          17,33
+  
+Prueba de Escritorio_1
+Matriz:
+44  / 13  / 20  /
+7  / 36  / 6  /
+29  / 39  / 40  /
+
+Los valores pares de esta matriz son:
+44  / 0  / 20  /
+0  / 36  / 6  /
+0  / 0  / 40  /
+
+Los valores impares de esta matriz son:
+0  / 13  / 0  /
+7  / 0  / 0  /
+29  / 39  / 0  /
+
+El promedio de los valores de la matriz es: 26
+

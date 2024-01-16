@@ -1,0 +1,36 @@
+ANALISIS_4
+ENTRADA                       PROCESO                                  SALIDA
+nombreClien              planilla<-planillaLuz(valorKV, cantKV)
+cedulaClien              predio<-valPredio(valorInmueble)              Valor
+Planilla de luz          planilla = valorKV * cantKV
+Predio de  inmueble      predio = valorInmueble * 0.02
+valorKV
+cantKV
+valorInmueble
+predio
+valPredio
+
+Prueba de Escritorio_4
+Ingrese literal que necesita:
+1. Planilla de luz
+2. Predio de  inmueble
+> 1
+
+Ingresar el valor del Kilovatio:
+> 9.2
+Ingrese la cantidad de kilovatios gastos en el mes:
+> 100
+Resultado
+
+Cliente Camila con cedula 1104939275 debe pagar 920
+
+Ingrese literal que necesita:
+1. Planilla de luz
+2. Predio de  inmueble
+> 2
+
+Ingresar el valor del Inmueble:
+> 500
+Resultado
+
+Cliente David con cedula 1103154967 su total de inmueble es 500 y su total de predio a pagar es 10

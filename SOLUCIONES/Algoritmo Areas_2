@@ -1,0 +1,49 @@
+Algoritmo Areas
+	Definir ingrelit Como Entero
+	Definir ladoCuadra, altTrian, baseTri, altRect, baseRect, areaTotal Como Real
+	areaTotal=0
+	Escribir "Ingrese el numero de lo que desea calcular "
+	Escribir "1. Area de  Triangulo"
+	Escribir "2. Area de  Cuadrado"
+	Escribir "3. Area de  Rectangulo"
+	Leer ingrelit
+	Escribir " "
+	Si (ingrelit == 1) Entonces
+		Escribir "Ingrese altura del triangulo: "
+		Leer altTrian
+		Escribir "Ingrese base del triangulo: "
+		Leer baseTrian
+		areaTotal<-areaTriangulo(baseTrian, altTrian)
+		Escribir "Area del triangulo es: ", areaTotal
+	SiNo
+		Si (ingrelit == 2) Entonces
+			Escribir "Ingrese el lado del cuadrado: "
+			Leer ladoCuadra
+		    areaTotal<-areaCuadrado(ladoCuadra)
+		    Escribir "Area del cuadrado es: ", areaTotal
+	    SiNo
+			Si(ingrelit == 3) Entonces
+				Escribir "Ingrese base del rectangulo: "
+				Leer baseRect
+				Escribir "Ingrese altura del rectangulo: "
+				Leer altRect
+				areaTotal<-areaRectangulo(baseRect, altRect)
+				Escribir "Area del rectangulo es: ", areaTotal
+			SiNo
+			FinSi
+		FinSi
+	FinSi
+	
+FinAlgoritmo
+
+SubProceso areaTotal<-areaTriangulo(altTrian,baseTrian)
+	areaTotal= (altTrian * baseTrian) / 2
+FinSubProceso
+
+SubProceso areaTotal<-areaCuadrado(ladoCuadra)
+	areaTotal = ladoCuadra * ladoCuadra
+FinSubProceso
+
+SubProceso areaTotal<-areaRectangulo(baseRect, altRect)
+	areaTotal = baseRect * altRect
+FinSubProceso

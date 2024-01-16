@@ -1,0 +1,17 @@
+ANALISIS_3
+ENTRADA                             PROCESO                                      SALIDA
+parametro1               Ingresar nota del primer parametro               promedio <= 5 "Regular"
+parametro2               Ingresar nota del segundo parametro              promedio <= 8 "Bueno"
+parametro3               Ingresar nota del tercero parametro              promedio <= 9 "Muy bueno"
+parametro4               Ingresar nota del cuarto parametro               promedio <= 5 "Sobresaliente"
+
+Prueba de Escritorio_3
+Ingresar nota del primer parametro :
+> 8
+Ingresar nota del segundo parametro :
+> 9
+Ingresar nota del tercer parametro :
+> 9
+Ingresar nota del cuarto parametro :
+> 8
+Su promedio cualitativo es: Muy bueno

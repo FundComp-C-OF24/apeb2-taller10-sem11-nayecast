@@ -1,0 +1,43 @@
+Algoritmo luz_Inmueble
+	Definir literal Como Entero
+	Definir valorKV, cantKV, valorInmueble Como Real
+	Definir cedulaClien, nombreClien Como Cadena
+	<< "Ingresar nombre del cliente: "
+	>> nombreClien
+	<< "Ingresar cedula del cliente: "
+	>>  cedulaClien
+	<< "Ingrese literal que necesita: "
+	<< "1. Planilla de luz"
+	<< "2. Predio de  inmueble"
+	>>  literal
+	<< "  "
+	Si (literal == 1 ) Entonces
+		<< "Ingresar el valor del Kilovatio: "
+		>>  valorKV
+		<< "Ingrese la cantidad de kilovatios gastos en el mes: "
+		>>  cantKV
+		planilla<-planillaLuz(valorKV, cantKV)
+		<< "Resultado"
+		<< " "
+		<< "Cliente ", nombreClien, " con cedula ", cedulaClien, " debe pagar ", planilla
+	SiNo
+		Si (literal == 2) Entonces
+			<< "Ingresar el valor del Inmueble: "
+			>>  valorInmueble
+			predio<-valPredio(valorInmueble)
+			<< "Resultado"
+			<< " "
+			<< "Cliente ", nombreClien, " con cedula ", cedulaClien, " su total de inmueble es", valorInmueble," y su total de predio es", predio
+		FinSi
+	FinSi
+FinAlgoritmo
+
+SubProceso planilla<-planillaLuz(valorKV, cantKV)
+	Definir planilla Como Real
+	planilla = valorKV * cantKV
+FinSubProceso
+
+SubProceso predio<-valPredio(valorInmueble)
+	Definir predio Como Real
+	predio = valorInmueble * 0.02
+FinSubProceso
