@@ -1,0 +1,67 @@
+Algoritmo calculadora
+    Definir limfila,limcolum Como Entero
+    << "Ingrese el limite de filas y columnas de la matriz: "
+    >> limfila
+    >> limcolum
+    Dimension matriz1[limfila, limcolum]
+    completarMatriz(matriz1, limfila, limcolum)
+    << "Matriz: "
+    generarMatriz(matriz1, limfila, limcolum)
+    Definir suma, resta, multiplicacion Como Entero
+    suma = sumaMatriz(matriz1, limfila, limcolum)
+    resta = restaMatriz(matriz1,limfila,limcolum)
+    multiplicacion = multiplicacionMatriz(matriz1, limfila, limcolum)
+    << "La suma de la matriz es:", suma
+    << "La resta de la matriz es:", resta
+    << "La multiplicación de la matriz es:", multiplicacion
+FinAlgoritmo
+
+SubProceso completarMatriz(matriz, limfila, limcolum)
+    Para i <- 0 Hasta limfila-1 Con Paso 1 Hacer
+        Para j <- 0 Hasta limcolum-1 Con Paso 1 Hacer
+            matriz[i, j] = Aleatorio(1, 10)
+        FinPara
+    FinPara
+FinSubProceso
+
+Funcion generarMatriz(matriz, limfila, limcolum)
+    Para i <- 0 Hasta limfila-1 Con Paso 1 Hacer
+        Para j <- 0 Hasta limcolum-1 Con Paso 1 Hacer
+            Escribir matriz[i, j], "  |  " Sin Saltar
+        FinPara
+        << " "
+    FinPara
+FinFuncion
+
+Funcion suma<-sumaMatriz(matriz, limfila, limcolum)
+    Definir suma Como Entero
+    suma = 0
+    Para i <- 0 Hasta limfila-1 Con Paso 1 Hacer
+        Para j <- 0 Hasta limcolum-1 Con Paso 1 Hacer
+            suma = suma + matriz[i, j]
+        FinPara
+    FinPara
+FinFuncion
+
+Funcion resta<-restaMatriz(matriz, limfila, limcolum)
+    Definir resta Como Entero
+    Para i <- 0 Hasta limfila-1 Con Paso 1 Hacer
+        Para j <- 0 Hasta limcolum-1 Con Paso 1 Hacer
+            Si i = 0 Y j = 0 Entonces
+                resta = matriz[i, j]
+            Sino
+                resta = resta - matriz[i, j]
+            FinSi
+        FinPara
+    FinPara
+FinFuncion
+
+Funcion multiplicacion<-multiplicacionMatriz(matriz, limfila, limcolum)
+    Definir multiplicacion Como Entero
+    multiplicacion = 1
+    Para i <- 0 Hasta limfila-1 Con Paso 1 Hacer
+        Para j <- 0 Hasta limcolum-1 Con Paso 1 Hacer
+            multiplicacion = multiplicacion * matriz[i, j]
+        FinPara
+    FinPara
+FinFuncion

@@ -1,0 +1,14 @@
+ANALISIS_5
+generar una matriz bidimensional
+
+Prueba de escritorio_5
+Ingrese el limite de filas y columnas de la matriz:
+> 3
+> 3
+Matriz:
+5  |  2  |  6  |
+7  |  5  |  7  |
+6  |  4  |  3  |
+La suma de los elementos de la matriz es:45
+La resta de los elementos de la matriz es:-35
+La multiplicación de los elementos de la matriz es:1058400
